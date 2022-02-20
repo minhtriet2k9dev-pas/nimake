@@ -12,6 +12,8 @@ const reservedWords = [
   "nimcmpr",
   "runafofi",
   "runafofis",
+  "afteropt",
+  "oneminus"
 ]
 
 const setKeys = [

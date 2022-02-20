@@ -3,6 +3,8 @@
 ## Why nimake?
 
 Nimake is similar to cmake but easier to use and render less files
+Nimake will render makefile and allow you to create your rule and also multiple compile for many files
+Also with some trick you can use nimake as build system for other languages
 
 ## Running
 
