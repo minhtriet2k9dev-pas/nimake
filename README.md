@@ -6,7 +6,21 @@ Nimake is similar to cmake but easier to use and render less files
 
 ## Running
 
-    make
+### Unix
+
+    make for_unix
+
+### Windows
+
+    make for_win
+
+### Building for Windows on Unix ( ! Require mingw)
+
+    make win_on_unix
+
+### Building for Windows on Unix and run Unix executable file ( ! Require mingw)
+
+    make unix_dev
 
 ## Requirements
 
