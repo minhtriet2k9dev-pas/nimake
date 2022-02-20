@@ -4,9 +4,9 @@ import core
 import token
 
 proc setup() =
+  helloUser()
   showMsg(infoColor, infoIcon, "Platform     : " & platform)
   showMsg(infoColor, infoIcon, "Architecture : " & architecture)
-  helloUser()
   detectNimakeInPath()
 
   if not fileExists(defaultCfgFile):
@@ -16,6 +16,6 @@ proc setup() =
 setup()
 
 let entireFile = readFile(defaultCfgFile)
-let lines = entireFile.splitLines()
+var lines = entireFile.splitLines()
 
 discard CoreTokenize(lines)
