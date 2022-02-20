@@ -1,3 +1,6 @@
+import coreToken
+import strutils
+
 type
   CoreToken = ref object of RootObj
     identifier: string
@@ -11,4 +14,6 @@ type
     isFloat: bool
 
 proc CoreTokenize*(lines: seq[string]): CoreToken =
-  echo "tokenize!"
+  for i in 0..<lines.len()-1:
+    for words in tokenize(lines[i]):
+      echo words
