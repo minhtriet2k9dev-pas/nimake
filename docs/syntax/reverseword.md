@@ -26,7 +26,7 @@
 -   multiplecmpl
 -   mainfilelist
 
-## Specila chars
+## Special chars
 
 -   `"` : For string delimiters
 -   `,` : Seperate
