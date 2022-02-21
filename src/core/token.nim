@@ -7,7 +7,7 @@ const reservedWords = [
   "add",
   "noecho",
   "opt",
-  "addOpt",
+  "addopt",
   "optforfile",
   "nimcmpr",
   "rufofi",
