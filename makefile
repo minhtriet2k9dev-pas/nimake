@@ -10,7 +10,7 @@ coreFile = src/core/initial.nim
 coreTokenFile = src/core/token.nim
 
 format:
-	@nimpretty $(srcFile) $(libFile) $(tokenFile) $(coreFile) $(coreTokenFile)
+	@nimpretty $(srcFile) $(parserFile) $(tokenFile) $(coreFile) $(coreTokenFile)
 
 compile_unix:
 	@nim c --hints:off -o:bin/nimake $(srcFile)

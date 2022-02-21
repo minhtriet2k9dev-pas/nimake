@@ -18,7 +18,7 @@
 -   afteropt
 -   oneminus
 
-## Set keys ( specific for Nim )
+## Set keys
 
 -   mainfile
 -   cmdbefore
