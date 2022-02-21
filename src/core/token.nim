@@ -24,6 +24,11 @@ const setKeys = [
   "mainfilelist",
 ]
 
+# TODO: find nim std set keys
+const nimSetKeys = [
+
+]
+
 const specialChars = [
   ",",
   "\"",

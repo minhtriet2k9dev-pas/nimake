@@ -1,6 +1,6 @@
 # Nimake syntax - `Reserve words`
 
-## Reverse words
+## Reserve words
 
 -   set
 -   let

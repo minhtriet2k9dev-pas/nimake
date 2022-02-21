@@ -5,8 +5,10 @@ import token
 
 proc setup() =
   # helloUser()
-  showMsg(infoColor, infoIcon, "Platform     : " & platform)
-  showMsg(infoColor, infoIcon, "Architecture : " & architecture)
+  showMsg(infoColor, infoIcon, "Platform     : " & platform, hlLine = 0,
+      hlStart = 14, hlEnd = 14+platform.len())
+  showMsg(infoColor, infoIcon, "Architecture : " & architecture, hlLine = 0,
+      hlStart = 14, hlEnd = 14+architecture.len())
   detectNimakeInPath()
 
   if not fileExists(defaultCfgFile):

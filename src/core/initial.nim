@@ -19,12 +19,13 @@ const warningColor* = colYellow
 const errorColor* = colRed
 const hintColor* = colLightGreen
 const infoColor* = colLightSkyBlue
-const hlColor* = colWhite
+const hlColor* = colPink
 
 proc showMsg*(colorCode: Color, icon: string = "", msg: string,
     autoIndent: bool = true, fullColor: bool = false,
         colorCodeForFullColor: Color = colorCode, indentChar: char = ' ',
-            hlLine, hlStart, hlEnd: int = -1, hlMsgColorCode: Color = hlColor) =
+            hlLine, hlStart, hlEnd: int = -1, hlMsgColorCode: Color = hlColor,
+                isItalic: bool = false) =
   # def proc
   stdout.write(ansiForegroundColorCode(colorCode), icon)
   stdout.write(ansiForegroundColorCode(colorCodeForFullColor))
@@ -37,7 +38,10 @@ proc showMsg*(colorCode: Color, icon: string = "", msg: string,
     doAssert hlStart < hlEnd
     stdout.write(newMsg[hlLine][0..hlStart-1])
     var hlMsgtext = ansiForegroundColorCode(hlMsgColorCode) & newMsg[hlLine][hlStart..hlEnd]
-    stdout.styledWrite(styleItalic, hlMsgText)
+    if isItalic:
+      stdout.styledWrite(styleItalic, hlMsgText)
+    else:
+      stdout.write(hlMsgText)
 
     if not fullColor:
       stdout.write(ansiResetCode)
@@ -70,6 +74,8 @@ proc showMsg*(colorCode: Color, icon: string = "", msg: string,
 
 
 # platform constant
+when defined(MACOS):
+  const platform* = "MacOS"
 when defined(APPLE):
   const platform* = "MacOS"
 when defined(LINUX):
