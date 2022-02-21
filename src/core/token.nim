@@ -10,8 +10,8 @@ const reservedWords = [
   "addOpt",
   "optforfile",
   "nimcmpr",
-  "runafofi",
-  "runafofis",
+  "rufofi",
+  "rufofis",
   "afteropt",
   "oneminus"
 ]
