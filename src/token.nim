@@ -1,25 +1,32 @@
-import coreToken
+import core/token
 import strutils
-import core
+import core/initial
 
 type
-  CoreToken = ref object of RootObj
-    identifier: string
-    value: string
+  CoreToken = object of RootObj
+    identifier*: string
     line: int
-    column: int
+    # column: int
 
   AdvancedToken = object of CoreToken
     isKeyword: bool
     isInt: bool
     isFloat: bool
+    isComment: bool
 
 
-proc CoreTokenize*(lines: var seq[string]): CoreToken =
+iterator CoreTokenize*(lines: var seq[string]): CoreToken =
   lines.add("")
 
+  var tok: CoreToken
   for i in 0..<lines.len()-1:
-    for (tok, isSep) in lines[i].tokenize({' ', ',', '"'}):
-      echo '"', tok, '"', " - ", isSep
+    for (tokid, isSep) in lines[i].tokenize({' ', ',', '"', '#'}):
+      tok = CoreToken(identifier: tokid.strip(leading = false).strip(
+          trailing = false), line: i)
+      if tok.identifier == "":
+        tok.identifier = " "
+      yield tok
 
   lines = lines[0..lines.len()-2]
+
+

@@ -6,8 +6,8 @@ unix_dev: compile_win_on_unix for_unix
 srcFile = src/nimake.nim
 parserFile = src/parser.nim
 tokenFile = src/token.nim
-coreFile = src/core.nim
-coreTokenFile = src/coreToken.nim
+coreFile = src/core/initial.nim
+coreTokenFile = src/core/token.nim
 
 format:
 	@nimpretty $(srcFile) $(libFile) $(tokenFile) $(coreFile) $(coreTokenFile)

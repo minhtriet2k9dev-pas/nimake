@@ -1,10 +1,10 @@
 import os
 import strutils
-import core
+import core/initial
 import token
 
 proc setup() =
-  helloUser()
+  # helloUser()
   showMsg(infoColor, infoIcon, "Platform     : " & platform)
   showMsg(infoColor, infoIcon, "Architecture : " & architecture)
   detectNimakeInPath()
@@ -18,4 +18,5 @@ setup()
 let entireFile = readFile(defaultCfgFile)
 var lines = entireFile.splitLines()
 
-discard CoreTokenize(lines)
+for tok in CoreTokenize(lines):
+  echo '"', tok.identifier, '"'
