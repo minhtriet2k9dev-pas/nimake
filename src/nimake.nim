@@ -15,10 +15,10 @@ proc setup() =
     showMsg(errorColor, errorIcon, "Cannot find default config file `nimakelist.nmk` in current directory")
     quit(1)
 
-setup()
+# setup()
 
 let entireFile = readFile(defaultCfgFile)
 var lines = entireFile.splitLines()
 
-for tok in CoreTokenize(lines):
-  echo '"', tok.identifier, '"'
+for tok in lines.CoreTokenize():
+  echo advancedTokenize(tok)

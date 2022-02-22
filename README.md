@@ -33,4 +33,4 @@ Also with some trick you can use nimake as build system for other languages
 
 ## Docs (files)
 
--   `docs/syntax/reservewords.md` : nimake standard reserve word
+-   `docs/syntax/reservedwords.md` : nimake standard reserved words

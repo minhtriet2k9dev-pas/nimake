@@ -1,22 +1,24 @@
-const reservedWords = [
+const reservedWords* = [
   "set",
   "let",
   "ovrt",
   "allow",
-  "onoff",
+  "toon",
+  "tooff",
   "add",
   "noecho",
-  "opt",
-  "addopt",
-  "optforfile",
   "nimcmpr",
-  "rufofi",
-  "rufofis",
+  "runafofi",
+  "runafofis",
   "afteropt",
-  "oneminus"
+  "oneminus",
+  "nimset",
+  "many"
 ]
 
-const setKeys = [
+const setKeys* = [
+  "addopt",
+  "optforfile",
   "mainfile",
   "cmdbefore",
   "cmdafter",
@@ -24,13 +26,43 @@ const setKeys = [
   "mainfilelist",
 ]
 
-# TODO: find nim std set keys
-const nimSetKeys = [
-
+const nimSetKeys* = [
+  "outdir",
+  "outfile",
+  "dbgnative",
+  "searchpath",
+  "stdout",
+  "hints",
+  "warnings",
+  "libpath",
+  "importpath",
+  "includedpath",
+  "ccompiler",
+  "cinludes",
+  "clibdir",
+  "clib",
+  "docroot",
+  "backend",
+  "skipcfg",
+  "skipusercfg",
+  "skipparent",
+  "skipprojCfg",
+  "excludepath",
+  "verbosity",
+  "ccompileropt",
+  "linkeropt",
+  "nimcache",
+  "cmpltoc",
+  "cmpltocpp",
+  "cmpltojs",
+  "cmpltoobjc",
+  "runscript",
+  "threads",
+  "run"
 ]
 
-const specialChars = [
+const specialChars* = [
   ",",
   "\"",
-  "#"
+  "#",
 ]
