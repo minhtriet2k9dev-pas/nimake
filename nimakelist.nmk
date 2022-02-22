@@ -1,4 +1,3 @@
-set opt "hello"
-#add hello option
+set opt "hello" # add hello option
 
 123
