@@ -1,3 +1,2 @@
-set opt "hello" # add hello option
-
-123
+# this is a comment
+setval outdir bin # set the output directory to bin

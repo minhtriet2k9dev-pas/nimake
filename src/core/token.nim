@@ -1,6 +1,9 @@
 const reservedWords* = [
   "set",
-  "setval"
+  "setval",
+  "nimset",
+  "settoon",
+  "settooff"
 ]
 
 const setKeys* = [
@@ -8,46 +11,49 @@ const setKeys* = [
 ]
 
 const setValKeys* = [
+  "outdir",
+  "outfile",
+  "optimize",
+  "searchpath",
+  "apptype",
 
 ]
 
-const nimSetKeys* = [
-  "outdir",
-  "outfile",
-  "dbgnative",
+const setOnOffKeys* = [
   "hints",
   "warnings",
-  "optimize",
   "checks",
-  "searchpath",
-  "apptype",
- # TODO: concept later
- # "libpath",
- # "importpath",
- # "includedpath",
- # "ccompiler",
- # "cinludes",
- # "clibdir",
- # "clib",
- # "stdout",
- # "docroot",
- # "backend",
- # "skipcfg",
- # "skipusercfg",
- # "skipparent",
- # "skipprojCfg",
- # "excludepath",
- # "verbosity",
- # "ccompileropt",
- # "linkeropt",
- # "nimcache",
- # "cmpltoc",
- # "cmpltocpp",
- # "cmpltojs",
- # "cmpltoobjc",
- # "runscript",
- # "threads",
- # "run"
+]
+
+const nimSetKeys* = [
+  "dbgnative",
+  # TODO: concept later
+    # "libpath",
+    # "importpath",
+    # "includedpath",
+    # "ccompiler",
+    # "cinludes",
+    # "clibdir",
+    # "clib",
+    # "stdout",
+    # "docroot",
+    # "backend",
+    # "skipcfg",
+    # "skipusercfg",
+    # "skipparent",
+    # "skipprojCfg",
+    # "excludepath",
+    # "verbosity",
+    # "ccompileropt",
+    # "linkeropt",
+    # "nimcache",
+    # "cmpltoc",
+    # "cmpltocpp",
+    # "cmpltojs",
+    # "cmpltoobjc",
+    # "runscript",
+    # "threads",
+    # "run"
 ]
 
 const specialChars* = [
