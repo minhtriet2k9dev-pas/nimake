@@ -23,10 +23,11 @@ Also with some trick you can use nimake as build system for other languages
 ## Requirements
 
 1. Nim >= 1.6.4
-2. Nimble >= 0.13.1
+2. Nimble >= 0.13.1 ( concept )
 3. Make
 4. Your brain ofcourse:)
 
-## Docs (files)
+## Docs files
 
 -   `docs/syntax/reservedwords.md` : nimake standard reserved words
+-   `docs/Error.md` : nimake errors
