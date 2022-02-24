@@ -8,26 +8,14 @@ Also with some trick you can use nimake as build system for other languages
 
 ## Running
 
-### Unix
+### Any platform
 
-    make for_unix
-
-### Windows
-
-    make for_win
-
-### Building for Windows on Unix ( ! Require mingw)
-
-    make win_on_unix
-
-### Building for Windows on Unix and run Unix executable file ( ! Require mingw)
-
-    make unix_dev
+    make
 
 ## Requirements
 
 1. Nim >= 1.6.4
-2. Nimbke >= 0.13.1
+2. Nimble >= 0.13.1
 3. Make
 4. Your brain ofcourse:)
 
