@@ -91,5 +91,3 @@ iterator tokenize*(lines: var seq[string]): Token =
       tok = Token(identifier: tokid, index: index, isInt: isInt, line: i+1)
       yield tok
 
-
-
