@@ -8,11 +8,6 @@ type
     isInt*: bool
 
 
-  # echo "Error #1 at (", tok.line, ",", tok.index, ") (", tok.line, ",",
-  #     lines[i].len(), "): Undelimited string. Maybe you are missing `\"`?"
-  # quit(1)
-
-
 iterator myTokenize(str: string, line: int): tuple[identifier: string,
     isInt: bool, index: int] =
   var isId = false

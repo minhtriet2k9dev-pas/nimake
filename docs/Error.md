@@ -10,4 +10,4 @@ Example:<br />
 ## Error #2
 
 This happend when a `\` missing a chracter after it.<br />
-Use of `\` is similar to any programming language
+Use of `\` is similar to any programming languages
