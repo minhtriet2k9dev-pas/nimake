@@ -8,9 +8,17 @@ Also with some trick you can use nimake as build system for other languages
 
 ## Running
 
-### Any platform
+### Building for any platform
 
     make
+
+## Build and run on unix
+
+    make unix
+
+## Build and run on Windows
+
+    make win
 
 ## Requirements
 

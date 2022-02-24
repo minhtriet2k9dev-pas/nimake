@@ -19,6 +19,14 @@ iterator myTokenize(str: string): tuple[identifier: string, isInt: bool] =
   var isStr = false
   var retId = ""
   var retIsInt = false
+
+  proc reset() =
+    retId = ""
+    retIsInt = false
+    isInt = false
+    isStr = false
+    isId = false
+
   for i in 0..str.len()-1:
     let endLine = i == str.len()-1
     if str[i] in Letters:
@@ -27,7 +35,7 @@ iterator myTokenize(str: string): tuple[identifier: string, isInt: bool] =
     if (str[i] notin Letters or endLine) and isId:
       isId = false
       yield (identifier: retId, isInt: retIsInt)
-
+      reset()
 
 iterator tokenize*(lines: var seq[string]): Token =
   lines.add("")

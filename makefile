@@ -1,4 +1,6 @@
-all: format compile run 
+std: format compile
+unix: std run_unix
+win: std run_win
 
 srcFile = nimake.nim
 parserFile = src/parser.nim
@@ -12,5 +14,8 @@ format:
 compile:
 	@nim c --hints:off --outdir:bin $(srcFile)
 
-run:
+run_unix:
 	@bin/nimake
+
+run_win:
+	@bin/nimake.exe
